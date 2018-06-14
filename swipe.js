@@ -28,9 +28,9 @@ function handleTouchMove(evt) {
         }
     }else {
         if ( yDiff > 0 ) {
-            loadbook(currentbook + 1);
+            if (currentbook < 6) loadbook(currentbook + 1);
         } else {
-            loadbook(currentbook - 1);
+            if (currentbook > 1) loadbook(currentbook - 1);
         }
     }
     xDown = null;

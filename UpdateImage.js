@@ -15,7 +15,6 @@ function loadbook(book){
 
 function gotopage(pagenumber){
   currentpage = pagenumber;
-  document.getElementById("pagebox").value = currentpage - shift;
   var link = prefix + ((pagenumber<10&&stupid==1)?"0":"")+ ((pagenumber<100&&stupid==1)?"0":"") + pagenumber + ".jpg";
   document.getElementById("loadImage").src = link;
 }

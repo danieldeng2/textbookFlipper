@@ -1,4 +1,4 @@
-var currentpage; var shift; var prefix;var stupid;
+var currentpage; var shift; var prefix;var stupid;var savedpage = [1,1,1,1,1,1];
 
 function loadbook(book){
   currentbook = book;
@@ -10,11 +10,13 @@ function loadbook(book){
   else if(book == 5){prefix = "http://assets-runtime-production-oxed-oup.avallain.net/ebooks/59205d88a7203d0941b3607b/images/";stupid = 0;shift = 16;}
   else if(book == 6){prefix = "http://assets-runtime-production-oxed-oup.avallain.net/ebooks/47820eb8e1eda4a69aba442a/images/";stupid = 0;shift = 12;}
   else {shift = 0;stupid = 0;}
-  gotopage(1);
+  gotopage(savedpage[currentbook - 1]);
 }
 
 function gotopage(pagenumber){
   currentpage = pagenumber;
+  savedpage[currentbook - 1] = currentpage;
+  document.getElementById("pagebox").value = currentpage - shift;
   var link = prefix + ((pagenumber<10&&stupid==1)?"0":"")+ ((pagenumber<100&&stupid==1)?"0":"") + pagenumber + ".jpg";
   document.getElementById("loadImage").src = link;
 }

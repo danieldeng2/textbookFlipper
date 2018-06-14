@@ -3,12 +3,12 @@
   <body>
     <center>
       <h1>
-        <a href="#" onclick="onflip(-1);" style = "text-decoration:none;"><</a>
-        <input type="text" id="pagebox" onkeypress="return flipkeypress()">
-        <a href="#" onclick="onflip(1);" style = "text-decoration:none;">></a>
+        book No#: <input type="text" id="bookbox" onkeypress="return bookkeypress()" style = "width: 30px;">
+        Page No#: <input type="text" id="pagebox" onkeypress="return flipkeypress()" style = "width: 30px;">
+        <br/>
       </h1>
+      <p></p>
       <img id="loadImage" />
-      <p>book No#: <input type="text" id="bookbox" onkeypress="return bookkeypress()"> </p>
     </center>
     <script src="swipe.js"></script>
     <script>

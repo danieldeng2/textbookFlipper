@@ -24,7 +24,7 @@ function handleTouchMove(evt) {
         if ( xDiff > 0 ) {
             gotopage(currentpage + 1);
         } else {
-            gotopage(currentpage - 1);
+            if (currentpage > 1) {gotopage(currentpage - 1);}
         }
     }else {
         if ( yDiff > 0 ) {

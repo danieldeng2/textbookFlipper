@@ -26,6 +26,12 @@ function handleTouchMove(evt) {
         } else {
             gotopage(currentpage - 1);
         }
+    }else {
+        if ( yDiff > 0 ) {
+            loadbook(currentbook + 1);
+        } else {
+            loadbook(currentbook - 1);
+        }
     }
     xDown = null;
     yDown = null;

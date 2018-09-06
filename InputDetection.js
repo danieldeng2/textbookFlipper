@@ -19,11 +19,11 @@ function checkKey(e) {
     }
     else if (e.keyCode == '38') {
       e.preventDefault();
-      if (currentbook > 1) loadbook(currentbook - 1);
+      loadbook(currentbook - 1);
     }
     else if (e.keyCode == '40') {
       e.preventDefault();
-      if (currentbook < 6) loadbook(currentbook + 1);
+      loadbook(currentbook + 1);
     }
 
 
@@ -54,9 +54,9 @@ function handleTouchMove(evt) {
         }
     }else {
         if ( yDiff > 0 ) {
-            if (currentbook < 6) loadbook(currentbook + 1);
+            loadbook(currentbook + 1);
         } else {
-            if (currentbook > 1) loadbook(currentbook - 1);
+            loadbook(currentbook - 1);
         }
     }
     xDown = null;
